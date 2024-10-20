@@ -30,3 +30,13 @@ app.listen(8080, () => {
     console.log("Server Listening on PORT:", 8080);
 });
 
+
+
+cron.schedule('* * * * *', async () => {
+    console.log('running every minute 1, 2, 4 and 5');
+    const result = await fetch("https://cvback-yj18.onrender.com/",{
+      method:"GET"
+    });
+    let res = await result.json()
+    console.log("res ", res)
+  });
