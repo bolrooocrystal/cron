@@ -44,10 +44,10 @@ cron.schedule('* * * * *', async () => {
     });
     let resupload = await resultupload.json()
     console.log("res upload ", resupload)
-    const resultclient = await fetch("https://elearnclient.onrender.com",{
+    const resultclient = await fetch("https://elearnclient.onrender.com/api/auth/me",{
       method:"GET"
     });
     let resclient = await resultclient.json()
-    console.log("res upload ", resclient)
+    console.log("res client ", resclient)
     
 });
