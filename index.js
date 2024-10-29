@@ -32,7 +32,7 @@ app.listen(8081, () => {
 
 
 
-cron.schedule('* * * * *', async () => {
+cron.schedule('*/5 * * * *', async () => {
     console.log('running every minute 1, 2, 4 and 5');
     try{
       const resultcv = await fetch("https://cvback-yj18.onrender.com/api/v1/test",{
